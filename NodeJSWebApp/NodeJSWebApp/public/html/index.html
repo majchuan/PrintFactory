@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="../stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <link href="../stylesheets/font.css" rel="stylesheet" />
+    <link href="../stylesheets/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../stylesheets/etalage.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.22/style/jquery.jscrollpane.css" rel="stylesheet" />
+    <link href="../stylesheets/std_menu.css" rel="stylesheet" />
+    <link href="../stylesheets/mb.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-2.1.4.js" type="text/javascript"></script>
+    <script src="http://malsup.github.io/min/jquery.form.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../lib/megamenu.js" type="text/javascript"></script>
+    <script src="../lib/underscore-min.js"></script>
+    <script src="../lib/backbone-min.js"></script>
+    <script type="text/javascript" src="../lib/modernizr.custom.53451.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js" type="text/javascript"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="../lib/jquery.etalage.min.js"></script>
+    <script src="../lib/jquery.easing.1.3.js" type="text/javascript"></script>
+    <srcipt src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js" type="text/javascript" ></srcipt>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jScrollPane/2.0.22/script/jquery.jscrollpane.min.js" type="text/javascript" ></script>
+    <script src="../lib/jquery.transform-0.9.3.min_.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="header_top">
+                <div class="row">
+                    <div class="col-md-12 h_menu4">
+                        <ul id="sdt_menu" class="sdt_menu">
+                            <li>
+                                <a href="">
+                                    <img src="../images/3.jpg" alt="" />
+                                    <span class="sdt_active"></span>
+                                    <span class="sdt_wrap">
+                                        <span class="sdt_link">Home</span>
+                                        <span class="sdt_descr">Get to Know US</span>
+                                    </span>
+                                </a>
+                                <div id="mb_menu" class="sdt_box">
+                                    <a href="#" data-speed="1000" data-easing="easeOutBack">Learn About US</a>
+                                    <a href="#" data-speed="1000" data-easing="easeOutBack">Background</a>
+                                    <a href="#" data-speed="1000" data-easing="easeOutBack">Skills</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#products">
+                                    <img src="../images/4.jpg" alt="" />
+                                    <span class="sdt_active"></span>
+                                    <span class="sdt_wrap">
+                                        <span class="sdt_link">Products</span>
+                                        <span class="sdt_descr">Our work</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact">
+                                    <img src="../images/6.jpg" alt="" />
+                                    <span class="sdt_active"></span>
+                                    <span class="sdt_wrap">
+                                        <span class="sdt_link">Contact US</span>
+                                        <span class="sdt_descr">I like to konw you</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li id="admin" style="display:none">
+                                <a href="#Admin/dashboard">
+                                    <img src="../images/5.jpg" alt="" />
+                                    <span class="sdt_active"></span>
+                                    <span class="sdt_wrap">
+                                        <span class="sdt_link">Dashboard</span>
+                                        <span class="sdt_descr">Manage products</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+            <div class="header_bottom">
+                <div class="col-sm-4 span_1">
+                    <div class="logo">
+                        <a href=""><img src="https://www.dropbox.com/s/2dq7zpoyiu45v4h/logo.png?dl=1" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-sm-8 row_2">
+                    <div class="header_bottom_right">
+                        <div class="search">
+                            <input id="SearchQuery" type="text" placeholder="Your Product" value="" />
+                            <input id="SearchProduct" type="submit" value="Search" />
+                        </div>
+                        <div class="login-info">
+                            <ul>
+                                <li>
+                                    <a href="#login">Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="content">
+                <div class="content_box">
+                    <div id="mb_pattern" class="mb_pattern"></div>
+                    <div id="mb_content_wrapper" class="mb_content_wrapper" >
+                        <span class="mb_close"></span>
+                        <div class="mb_content">
+                            <h2>About US</h2>
+                            <div class="mb_content_inner">
+                                <p>Our printing department offers a large array of apparel brands and styles and screen printing materials,</p>
+                                <p>so that you obtain the finished product that fits your purpose and style. We are not only offering screen printing.</p>
+                                <p>but also embroidery, Vinyl heat transfer, digital heat transfer, Direct-to-Garment printing, banner, sticker,</p>
+                                <p>window decal and vehicle warps. All works are done IN HOUSE, ensuring quality control and quick turnaround.</p>
+                                <p>With the recently new ownership and improved management, we could now offering same great quality products,</p>
+                                <p>better customer service and much faster turn-around. We look forward to having opportunity to work with you.</p>
+                            </div>
+                        </div>
+                        <div class="mb_content">
+                            <h2>Background</h2>
+                            <div class="mb_content_inner">
+                                <p>Rugged Country (B & H Canvas) is a locally-owned company located in Birch Hills, Saskatchewan.</p>
+                                <p>We had been servicing Birch Hill, Prince Albert and North Saskatchewan area since 1990.</p>
+                                <p>Rugged Country manufactured custom business executive bags, cash bags for bank, Hockey bags,</p>
+                                <p>team/player garments bags, Gun/bow cases, hunting belts and custom fitted boat covers.</p>
+                            </div>
+                        </div>
+                        <div class="mb_content">
+                            <h2>Skills</h2>
+                            <div class="mb_content_inner">
+                                <p>Screen Printing</p>
+                                <p>Embroidery</p>
+                                <p>Direct-To-Garment Printing</p>
+                                <p>Heat Transfer</p>
+                                <p>Digital Heat Transfer</p>
+                                <p>Traophy Name Tags</p>
+                                <p>Window Decals/Sticker/Vehicle wraps</p>
+                                <p>Banner/Sign</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="image_1_of_3">
+                            <img src="../images/round1.png" />
+                            <h3>About US</h3>
+                            <p>Getting To Know US</p>
+                            <div class="button"><span class="mb_readmore"><a id="mb_aboutus" href="#" data-speed="1000" data-easing="easeOutBack">Read More</a></span></div>
+                        </div>
+                        <div class="image_1_of_3">
+                            <img src="../images/round2.png" />
+                            <h3>Background</h3>
+                            <p>Where Are We From</p>
+                            <div class="button"><span class="mb_readmore"><a id="mb_background" href="#" data-speed="1000" data-easing="easeOutBack">Read More</a></span></div>
+                        </div>
+                        <div class="image_1_of_3">
+                            <img src="../images/round3.png" />
+                            <h3>Skill</h3>
+                            <p>What We Can Do</p>
+                            <div class="button"><span class="mb_readmore"><a id="mb_skills" href="#" data-speed="1000" data-easing="easeOutBack">Read More</a></span></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="row">
+                        <div id="dg-container" class="dg-container">
+                            <div class="dg-wrapper">
+                                <a href="#"><img src="../../images/_DSC2975.JPG" alt="" /></a>
+                                <a href="#"><img src="../../images/_DSC2980.JPG" alt="" /></a>
+                                <a href="#"><img src="../../images/_DSC3033.JPG" alt="" /></a>
+                                <a href="#"><img src="../../images/_DSC3154.JPG" alt="" /></a>
+                                <a href="#"><img src="../../images/_DSC3169.JPG" alt="" /></a>
+                                <a href="#"><img src="../../images/_DSC3184.JPG" alt="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="footer_top">
+                    <div class="span_of_4">
+                        <div class="col-md-12 box_4">
+                            <div class="span1_of_2">
+                                <h5>need help? <a href="#contact">contact us <span> &gt;</span> </a> </h5>
+                                <p>(or) Call us: +22-34-2458793</p>
+                            </div>
+                            <div class="span1_of_2">
+                                <h5>follow us </h5>
+                                <div class="social-icons">
+                                    <ul>
+                                        <li><a href="#" target="_blank"></a></li>
+                                        <li><a href="#" target="_blank"></a></li>
+                                        <li><a href="#" target="_blank"></a></li>
+                                        <li><a href="#" target="_blank"></a></li>
+                                        <li class="last2"><a href="#" target="_blank"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="copy">
+                        <p>Copyright &copy; 2015.Company name All rights reserved by mark ma</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../lib/jquery.gallery.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            /**
+            * for each menu element, on mouseenter,
+            * we enlarge the image, and show both sdt_active span and
+            * sdt_wrap span. If the element has a sub menu (sdt_box),
+            * then we slide it - if the element is the last one in the menu
+            * we slide it to the left, otherwise to the right
+            */
+            $('#sdt_menu > li').bind('mouseenter', function () {
+                var $elem = $(this);
+                $elem.find('img')
+                     .stop(true)
+                     .animate({
+                         'width': '170px',
+                         'height': '170px',
+                         'left': '0px'
+                     }, 400, 'easeOutBack')
+                     .andSelf()
+                     .find('.sdt_wrap')
+                     .stop(true)
+                     .animate({ 'top': '140px' }, 500, 'easeOutBack')
+                     .andSelf()
+                     .find('.sdt_active')
+                     .stop(true)
+                     .animate({ 'height': '170px' }, 300, function () {
+                         var $sub_menu = $elem.find('.sdt_box');
+                         if ($sub_menu.length) {
+                             var left = '170px';
+                             if ($elem.parent().children().length == $elem.index() + 1)
+                                 left = '-170px';
+                             $sub_menu.show().animate({ 'left': left }, 200);
+                         }
+                     });
+            }).bind('mouseleave', function () {
+                var $elem = $(this);
+                var $sub_menu = $elem.find('.sdt_box');
+                if ($sub_menu.length)
+                    $sub_menu.hide().css('left', '0px');
+
+                $elem.find('.sdt_active')
+                     .stop(true)
+                     .animate({ 'height': '0px' }, 300)
+                     .andSelf().find('img')
+                     .stop(true)
+                     .animate({
+                         'width': '0px',
+                         'height': '0px',
+                         'left': '85px'
+                     }, 400)
+                     .andSelf()
+                     .find('.sdt_wrap')
+                     .stop(true)
+                     .animate({ 'top': '25px' }, 500);
+            });
+        });
+    </script>
+
+    <!--Initial Backbone Application-->
+    <script src="../lib/json2.js"></script>
+    <script src="../javascripts/utils.js"></script>
+    <script src="../javascripts/model/printFactory.js" type="text/javascript"></script>
+    <script src="../javascripts/view/error.js" type="text/javascript"></script>
+    <script src="../javascripts/view/login.js" type="text/javascript"></script>
+    <script src="../javascripts/view/dashboard.js" type="text/javascript"></script>
+    <script src="../javascripts/view/contact.js" type="text/javascript"></script>
+    <script src="../javascripts/view/products.js" type="text/javascript"></script>
+    <script src="../javascripts/view/company.js" type="text/javascript"></script>
+    <script src="../javascripts/view/index.js" type="text/javascript"></script>
+    <script src="../javascripts/main.js" type="text/javascript"></script>
+
+</body>
+</html>

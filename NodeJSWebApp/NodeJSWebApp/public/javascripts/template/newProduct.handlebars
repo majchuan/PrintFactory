@@ -1,0 +1,29 @@
+﻿<div class="men">
+    <div class="row">&nbsp;</div>
+    <div id="formAdd" class="new_product_form">
+        <h2>Add New Product</h2>
+        <form id="manageForm" role="form">
+            <div class="row_6">
+                <div class="form-group">
+                    <label for="lbName">Product Name:</label>
+                    <input name="ProductName" type="text" class="text form-control" placeholder="Name" value="{{product.product_name}}" />
+                    <input name="ProductID" type="hidden" class="text form-control" value="{{product._id}}" />
+                </div>
+                <div class="form-group">
+                    <label for="lbPrice">Product Price:</label>
+                    <input name="ProductPrice" type="number" placeholder="Price" class="text form-control" value="{{product.product_price}}" />
+                </div>
+                <div class="form-group">
+                    <label for="lbDes">Product Description:</label>
+                    <textarea name="ProductDesc" placeholder="Description" class="form-control">{{product.product_description}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="lbImage1">Product Image Name (you can select multiple images one time): {{product.product_picture}}</label>
+                    <input type="file" style="width:100%" name="image1" accept="image/*" multiple />
+                </div>
+            </div>
+            <input name="submit" type="submit" id="submitAdd" value="Save Product">
+            <div class="clearfix"></div>
+        </form>
+    </div>
+</div>

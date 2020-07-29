@@ -1,0 +1,346 @@
+﻿<div id="about_us" class="men about-bg">
+    <div id="mb_pattern" class="mb_pattern"></div>
+    <div id="mb_content_wrapper" class="mb_content_wrapper">
+        <span class="mb_close"></span>
+        <div class="mb_content">
+            <h2>About US</h2>
+            <div class="mb_content_inner">
+                {{# each companyIntro}}
+                    <p>{{this}}</p>
+                {{/each}}
+            </div>
+        </div>
+        <div class="mb_content">
+            <h2>Background</h2>
+            <div class="mb_content_inner">
+                {{# each background}}
+                    <p>{{this}}</p>
+                {{/each}}
+            </div>
+        </div>
+        <div class="mb_content">
+            <h2>Skills</h2>
+            <div class="mb_content_inner">
+                {{# each skillsets}}
+                    <p>{{this}}</p>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="image_1_of_3">
+            <img src="../images/round1.png" />
+            <h3>About US</h3>
+            <p>Getting To Know US</p>
+            <div class="button"><span class="mb_readmore"><a id="mb_aboutus" href="#" data-speed="1000" data-easing="easeOutBack">Read More</a></span></div>
+        </div>
+        <div class="image_1_of_3">
+            <img src="../images/round2.png" />
+            <h3>Background</h3>
+            <p>Where Are We From</p>
+            <div class="button"><span class="mb_readmore"><a id="mb_background" href="#" data-speed="1000" data-easing="easeOutBack">Read More</a></span></div>
+        </div>
+        <div class="image_1_of_3">
+            <img src="../images/round3.png" />
+            <h3>Skill</h3>
+            <p>What We Can Do</p>
+            <div class="button"><span class="mb_readmore"><a id="mb_skills" href="#" data-speed="1000" data-easing="easeOutBack">Read More</a></span></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="row">
+        <div id="dg-container" class="dg-container">
+            <div class="dg-wrapper">
+                <a href="#"><img src="../images/_DSC2975.JPG" alt="" /></a>
+                <a href="#"><img src="../images/_DSC2980.JPG" alt="" /></a>
+                <a href="#"><img src="../images/_DSC3033.JPG" alt="" /></a>
+                <a href="#"><img src="../images/_DSC3154.JPG" alt="" /></a>
+                <a href="#"><img src="../images/_DSC3169.JPG" alt="" /></a>
+                <a href="#"><img src="../images/_DSC3184.JPG" alt="" /></a>
+            </div>
+        </div>
+    </div>
+</div> 
+<script type="text/javascript" src="../../lib/jquery.gallery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#dg-container').gallery({
+			autoplay : true
+		});
+	});
+	$(function () {
+	    var $menu = $('#mb_menu'),
+            $menuItems = $menu.children('a'),
+            $mbWrapper = $('#mb_content_wrapper'),
+            $mbClose = $mbWrapper.children('.mb_close'),
+            $mbContentItems = $mbWrapper.children('.mb_content'),
+            $mbContentInnerItems = $mbContentItems.children('.mb_content_inner'),
+            $mbPattern = $('#mb_pattern'),
+            $mbReadMore = $('#mb_readmore'),
+            $mbAboutUS = $('#mb_aboutus'),
+            $mbBackground = $('#mb_background'),
+            $mbSkills = $('#mb_skills'),
+
+            FlashContent = (function () {
+                var init = function () {
+                    initPlugins();
+                    initPattern();
+                    initEventsHandler();
+                },
+                initPlugins = function () {
+                    $mbContentInnerItems.jScrollPane({
+                        verticalDragMinHeight: 40,
+                        verticalDragMaxHeight: 40
+                    });
+                },
+
+                initPattern = function () {
+                    for (var i = 0 ; i < 36 ; i++) {
+                        var op = 0.1;
+                        //topvalue = Math.floor(Math.random() * 196) + 5,
+                        //leftvalue = Math.floor(Math.random() * 696) + 5,
+                        //adegree = Math.floor(Math.random() * 101) - 50;
+                        var topvalue = 0;
+                        var leftvalue = 0;
+
+                        switch (true) {
+                            case ($(window).width() > 960):
+                                topvalue = Math.floor(Math.random() * 196) + 5;
+                                leftvalue = Math.floor(Math.random() * 696) + 5;
+                                break;
+                            case ($(window).width() > 640 && $(window).width < 960):
+                                topvalue = Math.floor(Math.random() * 196) + 5;
+                                leftvalue = Math.floor(Math.random() * 496) + 5;
+                                break;
+                            case ($(window).width() < 640):
+                                topvalue = Math.floor(Math.random() * 196) + 5;
+                                leftvalue = Math.floor(Math.random() * 296) + 5;
+                                break;
+                        }
+                        $el = $('<div>').css({
+                            opacity: op,
+                            top: topvalue + 'px',
+                            left: leftvalue + 'px'
+                        });
+
+                        $el.appendTo($mbPattern);
+                    }
+
+                },
+                disperse = function () {
+                    $mbPattern.children().each(function (i) {
+                        //random opacity, top, left and angle
+                        var o = 0.1;
+                        //t = Math.floor(Math.random() * 196) + 5, // between 5 and 200
+                        //l = Math.floor(Math.random() * 696) + 5, // between 5 and 700
+                        //a = Math.floor(Math.random() * 101) - 50; // between -50 and 50
+                        var t = 0;
+                        var l = 0;
+                        switch (true) {
+                            case ($(window).width() > 960):
+                                t = Math.floor(Math.random() * 196) + 5;
+                                l = Math.floor(Math.random() * 696) + 5;
+                                break;
+                            case ($(window).width() > 640 && $(window).width() < 960):
+                                t = Math.floor(Math.random() * 196) + 5;
+                                l = Math.floor(Math.random() * 496) + 5;
+                                break;
+                            case ($(window).width() < 640):
+                                t = Math.floor(Math.random() * 196) + 5;
+                                l = Math.floor(Math.random() * 396) + 5;
+                                break;
+                        }
+
+                        $el = $(this),
+                        param = {
+                            width: '100px',
+                            height: '100px',
+                            opacity: o,
+                            top: t + 'px',
+                            left: l + 'px'
+                        };
+
+                        $el.animate(param, 1000, 'easeOutExpo');
+                    });
+                },
+                initEventsHandler = function () {
+                    /*
+                        click a link in the menu
+                     */
+                    $menuItems.bind('click', function (e) {
+                        var $this = $(this),
+                        pos = $this.index(),
+                        speed = $this.data('speed'),
+                        easing = $this.data('easing');
+                        //if an item is not yet shown
+                        if (!$menu.data('open')) {
+                            //if current animating return
+                            if ($menu.data('moving')) return false;
+                            $menu.data('moving', true);
+                            $.when(openItem(pos, speed, easing)).done(function () {
+                                $menu.data({
+                                    open: true,
+                                    moving: false
+                                });
+                                showContentItem(pos);
+                                $mbPattern.children().fadeOut(500);
+                            });
+                        }
+                        else {
+                            showContentItem(pos);
+                        }
+                        //return false;
+                    });
+
+                    /*
+                    * Click a About US read more link
+                    */
+                    $mbAboutUS.bind('click', function (e) {
+                        var $this = $(this),
+                            pos = 0,
+                            speed = $this.data('speed'),
+                            easing = $this.data('easing');
+                        if (!$mbReadMore.data('open')) {
+                            if ($mbReadMore.data('moving')) return false;
+                            $mbReadMore.data('moving', true);
+                            $.when(openItem(pos, speed, easing)).done(function () {
+                                $mbReadMore.data({
+                                    open: true,
+                                    moving: false
+                                });
+                                showContentItem(pos);
+                                $mbPattern.children().fadeOut(500);
+                            });
+                        } else {
+                            showContentItem(pos);
+                        }
+                        //return false;
+                    });
+
+                    /*
+                    * Click a background read more link
+                    */
+                    $mbBackground.bind('click', function (e) {
+                        var $this = $(this),
+                            pos = 1,
+                            speed = $this.data('speed'),
+                            easing = $this.data('easing');
+                        if (!$mbReadMore.data('open')) {
+                            if ($mbReadMore.data('moving')) return false;
+                            $mbReadMore.data('moving', true);
+                            $.when(openItem(pos, speed, easing)).done(function () {
+                                $mbReadMore.data({
+                                    open: true,
+                                    moving: false
+                                });
+                                showContentItem(pos);
+                                $mbPattern.children().fadeOut(500);
+                            });
+                        } else {
+                            showContentItem(pos);
+                        }
+                        //return false;
+                    });
+
+                    /*
+                    * Click a Skills read more link
+                    */
+                    $mbSkills.bind('click', function (e) {
+                        var $this = $(this),
+                            pos = 2,
+                            speed = $this.data('speed'),
+                            easing = $this.data('easing');
+                        if (!$mbReadMore.data('open')) {
+                            if ($mbReadMore.data('moving')) return false;
+                            $mbReadMore.data('moving', true);
+
+                            $.when(openItem(pos, speed, easing)).done(function () {
+                                $mbReadMore.data({
+                                    open: true,
+                                    moving: false
+                                });
+                                showContentItem(pos);
+                                $mbPattern.children().fadeOut(500);
+                            });
+                        } else {
+                            alert('test');
+                            showContentItem(pos);
+                        }
+                        //return false;
+                    });
+
+                    /*
+                        click close makes the boxes animate to the top of the page
+                     */
+                    $mbClose.bind('click', function (e) {
+                        $menu.data('open', false);
+                        $mbReadMore.data('open', false);
+                        /*
+                            if we would want to show the default image when we close:
+                            changeBGImage('images/default.jpg');
+                         */
+                        $mbPattern.children().fadeIn(500, function () {
+                            $mbContentItems.hide();
+                            $mbWrapper.hide();
+                        });
+
+                        disperse();
+                        return false;
+                    });
+                },
+                showContentItem = function (pos) {
+                    $mbContentItems.hide();
+                    $mbWrapper.show();
+                    $mbContentItems.eq(pos).show().children('.mb_content_inner').jScrollPane({ autoReinitialise: true });
+                },
+                openItem = function (pos, speed, easing) {
+                    return $.Deferred(
+                    function (dfd) {
+                        $mbPattern.children().each(function (i) {
+                            var topvalue = 0;
+                            var leftvalue = 0;
+                            switch (true) {
+                                case ($(window).width() > 960):
+                                    topvalue = 354 + 100 * Math.floor(i / 6);
+                                    leftvalue = 450 + 100 * (i % 6);
+                                    break;
+                                case ($(window).width() > 640 && $(window).width() < 960):
+                                    topvalue = 354 + 100 * Math.floor(i / 6);
+                                    leftvalue = 250 + 100 * (i % 6);
+                                    break;
+                                case ($(window).width() < 640):
+                                    topvalue = 354 + 100 * Math.floor(i / 6);
+                                    leftvalue = 150 + 100 * (i % 6);
+                                    break;
+                            }
+                            var $el = $(this),
+                            param = {
+                                width: '100px',
+                                height: '100px',
+                                top: topvalue, //354 + 100 * Math.floor(i / 6),
+                                left: leftvalue, //450 + 100 * (i % 6),
+                                opacity: 10
+                            };
+
+
+                            try {
+                                $el.animate(param, speed, easing, dfd.resolve);
+                            } catch (err) {
+                                console.log(err);
+                            }
+
+                        });
+                    }
+                ).promise();
+                };
+
+                return {
+                    init: init
+                };
+
+            })();
+
+	    FlashContent.init();
+
+	});
+</script>

@@ -1,0 +1,47 @@
+﻿<div id="ProductDetail" class="men">
+    <div class="single_top">
+        <div class="col-md-12 single_right">
+            <section class="slider">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <ol class="carousel-indicators">
+                        {{#each product.product_picture}}
+                            {{#if @first}}
+                                <li data-target="#myCarousel" data-slide-to="{{@index}}" class="active"></li>
+                            {{else}}
+                                <li data-target="#myCarousel" data-slide-to="{{@index}}"></li>
+                            {{/if}}
+                        {{/each}}
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        {{#each product.product_picture}}
+                            {{#if @first}}
+                                <div class="item active">
+                                    <img src="https://www.dropbox.com/s/{{this}}?dl=1" alt="" />
+                                    <div class="carousel-caption">
+                                        <h3>{{product.product_name}}</h3>
+                                        <p>{{product.product_description}}</p>
+                                    </div>
+                                </div>
+                            {{else}}
+                                <div class="item">
+                                    <img src="https://www.dropbox.com/s/{{this}}?dl=1" alt="" />
+                                    <div class="carousel-caption">
+                                        <h3>{{product.product_name}}</h3>
+                                        <p>{{product.product_description}}</p>
+                                    </div>
+                                </div>
+                            {{/if}}
+                        {{/each}}
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>

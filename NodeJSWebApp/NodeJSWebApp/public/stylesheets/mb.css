@@ -1,0 +1,139 @@
+
+.mb_pattern div{
+	position:absolute;
+	width:50px;
+	height:50px;
+	background:#000;
+	z-index:10;
+}
+
+.mb_content_wrapper{
+	background:transparent url(../images/mb_bg_menu.png) repeat top left;
+	width:600px;
+	height:650px;
+	position:absolute;
+	top:354px;
+	left:450px;
+	z-index:4;
+	display:none;
+}
+span.mb_close{
+	position:absolute;
+	top:10px;
+	right:10px;
+	width:11px;
+	height:12px;
+	cursor:pointer;
+	background:transparent url(../images/mb_close.png) no-repeat top left;
+	opacity:0.8;
+}
+span.mb_close:hover{
+	opacity:1.0;
+}
+.mb_content{
+	padding:30px;
+	display:none;
+}
+.mb_content h2{
+	font-family:"Astloch";
+	text-shadow:0px 0px 1px #fff;
+	font-size:42px;
+	background:transparent url(../images/mb_line.png) repeat-x bottom left;
+	padding:0px 0px 5px 0px;
+	margin-bottom:10px;
+}
+.mb_content_inner{
+	line-height:24px;
+	height:500px;
+	outline: none;
+}
+.mb_content_inner p{
+	padding:5px 0px;
+    color:#fff;
+}
+ul.mb_imagelist li{
+	float:left;
+	margin:2px;
+	cursor:pointer;
+}
+ul.mb_imagelist li img{
+	display:block;
+	opacity:0.3;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-transition: all 0.5s ease-in-out;
+}
+ul.mb_imagelist li img:hover{
+	opacity:1.0;
+}
+.mb_content form label{
+	float:left;
+	width:100px;
+	text-align:right;
+	margin-right:10px;
+}
+.mb_content form div{
+	padding:5px 0px;
+}
+.mb_content form input,
+.mb_content form textarea{
+	border:none;
+	background:#fff;
+	width:200px;
+	font-family:Arial;
+	color:#555;
+	padding:4px;
+}
+.mb_content form textarea{
+	height:140px;
+}
+button{
+	background:#ddd;
+	border:none;
+	color:#000;
+	padding:3px 10px;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+	cursor:pointer;
+	float:right;
+	margin-right:22px;
+}
+button:hover{
+	background:#fff;
+}
+
+
+@media screen and (max-width: 960px){
+    .mb_content_wrapper{
+        width:300px;
+	    height:450px;
+	    top:354px;
+	    left:200px;
+    }
+}
+
+
+@media screen and (max-width: 640px){
+    .mb_content_wrapper{
+        width:300px;
+	    height:800px;
+	    top:354px;
+	    left:150px;
+    }
+
+    .mb_content_inner{
+	    height:650px;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .mb_content_wrapper{
+        width:250px;
+	    height:950px;
+	    top:354px;
+	    left:80px;
+    }
+    .mb_content_inner{
+	    height:850px;
+    }
+}

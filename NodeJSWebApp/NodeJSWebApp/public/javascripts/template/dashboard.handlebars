@@ -1,0 +1,49 @@
+﻿
+<div class="men">
+    <div class="new_product_form">
+        <div class="row_5">
+            <a href="#Admin/new">Add New Product</a> 
+            |
+            <a href="#Admin/managePassword">Manage Password</a>
+            |
+            <a href="#Admin/updateCompanyInfo">Manage Company Info</a>
+        </div>
+        <div class="row">&nbsp;</div>
+
+        <div class="span_of_2">
+            <div class="span1_of_2">
+                <h5>All Products</h5>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        {{#each products}}
+        <div class="row">
+            <div class="col-md-3 box_4">
+                <h4>&nbsp;</h4>
+                <ul class="f_nav">
+                    <li><a href="#detail/{{_id}}">Product Name : {{product_name}}</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 box_4">
+                <h4>&nbsp;</h4>
+                <ul class="f_nav">
+                    <li><a href="#detail/{{_id}}">View this Product</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 box_4">
+                <h4> &nbsp;</h4>
+                <ul class="f_nav">
+                    <li><a href="#Admin/edit/{{_id}}">Edit this Product</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 box_4">
+                <h4>&nbsp;</h4>
+                <ul class="f_nav">
+                    <li><a href="#Admin/delete/{{_id}}">Delete this Product</a></li>
+                </ul>
+            </div>
+        </div>
+        {{/each}}
+        <div class="clearfix"></div>
+    </div>
+</div>

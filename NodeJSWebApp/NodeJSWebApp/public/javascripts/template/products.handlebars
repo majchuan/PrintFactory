@@ -1,0 +1,96 @@
+﻿<div class="men" id="ProductsList">
+    <div class="col-md-3 sidebar">
+        <div class="block block-layered-nav">
+            <div class="block-title">
+                <strong><span>Browser By</span></strong>
+            </div>
+            <div class="block-content">
+                <dl id="narrow-by-list">
+                    <dt class="odd">Price</dt>
+                    <dd class="odd">
+                        <ol>
+                            <li>
+                                <a href="#" class="priceBrowserBy" data-index="1"><span class="price1">(CA$)0.00</span>-<span class="price1">(CA$)199.99</span></a>
+                                ({{price1}})
+                            </li>
+                            <li>
+                                <a href="#" class="priceBrowserBy" data-index="2"><span class="price1">(CA$)200.00</span>-<span class="price1">(CA$)399.99</span></a>
+                                ({{price2}})
+                            </li>
+                            <li>
+                                <a href="#" class="priceBrowserBy" data-index="3"><span class="price1">(CA$)400.00</span> and above</a>
+                                ({{price3}})
+                            </li>
+                        </ol>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div id="ProductListDetails" class="col-md-9">
+        <div class="mens-toolbar">
+            <div class="sort" >
+                <div class="sort-by">
+                    <label>Sort By</label>
+                    <select id="selectSortBy">
+                        <option value="0">
+                            Price : High to Low
+                        </option>
+                        <option value="1">
+                            Price : Low to High
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="pager">
+                <ul class="dc_pagination" >
+                    <li><a href="#" class="previous">Prev Page</a></li>
+                    <li><a href="#" class="next">Next Page</a></li>
+                    <li><span id="CurrentPageNum">{{CurrentPageNumber}}</span><p>of</p><span id="TotalPageNum">{{TotalPagesNumber}}</span></li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="span_2">
+            {{#each products}}
+                <div class="col_1_of_single1 span_1_of_single1">
+                    <a href="#detail/{{_id}}">
+                        <img src="https://www.dropbox.com/s/{{this.product_picture.[0]}}?dl=1" class="img-responsive" alt="" />
+                        <h3>{{this.product_name}}</h3>
+                        <p>{{product_description}}</p>
+                        <h4>{{product_price}}</h4>
+                    </a>
+                </div>
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+        <div class="span_2">
+            {{#each products2}}
+            <div class="col_1_of_single1 span_1_of_single1">
+                <a href="#detail/{{_id}}">
+                    <img src="https://www.dropbox.com/s/{{this.product_picture.[0]}}?dl=1" class="img-responsive" alt="" />
+                    <h3>{{product_name}}</h3>
+                    <p>{{product_description}}</p>
+                    <h4>{{product_price}}</h4>
+                </a>
+            </div>
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+        <div class="span_3">
+            {{#each products3}}
+            <div class="col_1_of_single1 span_1_of_single1">
+                <a href="#detail/{{_id}}">
+                    <img src="https://www.dropbox.com/s/{{this.product_picture.[0]}}?dl=1" class="img-responsive" alt="" />
+                    <h3>{{product_name}}</h3>
+                    <p>{{product_description}}</p>
+                    <h4>{{product_price}}</h4>
+                </a>
+            </div>
+            {{/each}}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="clearfix"> </div>
+</div>

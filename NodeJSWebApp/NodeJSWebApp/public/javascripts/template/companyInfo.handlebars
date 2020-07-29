@@ -1,0 +1,24 @@
+﻿<div class="men">
+    <div id="formEdit" class="new_product_form">
+        <h2>Update Company Info</h2>
+        <form id="manageForm" role="form">
+            <div class="row_6">
+                <div class="form-group">
+                    <label for="lbIntro">Company Introduction:</label>
+                    <textarea name="companyIntro" placeholder="Company Introduction" class="form-control"></textarea>
+                    <input name="companyID" type="hidden" class="text form-control" value="{{this.id}}" />
+                </div>
+                <div class="form-group">
+                    <label for="lbBackground">Background:</label>
+                    <textarea name="background" placeholder="Background" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="lbSkillSets">SkillSets:</label>
+                    <textarea name="skillsets" placeholder="Skillset" class="form-control"></textarea>
+                </div>
+            </div>
+            <input name="submit" type="submit" id="submitCompanyInfo" value="Save Company Info">
+            <div class="clearfix"></div>
+        </form>
+    </div>
+</div>
