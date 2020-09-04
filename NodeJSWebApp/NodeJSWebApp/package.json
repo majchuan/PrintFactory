@@ -20,7 +20,7 @@
     "debug": "~2.0.0",
     "jade": "~1.6.0",
     "stylus": "0.42.3",
-    "mongodb": "~2.0.46",
+    "mongodb": "~3.6.1",
     "backbone": "~1.2.3",
     "uinexpress": "~0.0.5",
     "nodemailer": "~1.10.0",
